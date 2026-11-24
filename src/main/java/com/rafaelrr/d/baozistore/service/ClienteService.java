@@ -9,6 +9,6 @@ public interface ClienteService {
 	public void update(Cliente cliente);
 	public Cliente findId(Long id);
 	public List<Cliente> findAll();
-	public void Delete(Long id);
+	public void delete(Long id);
 
 }

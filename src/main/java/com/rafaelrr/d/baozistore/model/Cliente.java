@@ -2,6 +2,8 @@ package com.rafaelrr.d.baozistore.model;
 
 import java.time.LocalDate;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,7 +26,8 @@ public class Cliente {
 	@Column(nullable = false, unique = false, length = 60)
 	private String nome;
 
-	@Column(name = "data_cadastro")
+	@Column(name = "data_cadastro", nullable = true, columnDefinition = "DATE")
+	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private LocalDate dataCadastro;
 
 	public Cliente() {

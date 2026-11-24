@@ -50,7 +50,7 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 
 	@Override
-	public void Delete(Long id) {
+	public void delete(Long id) {
 
 		Cliente buscarCliente = clienteRepository.findById(id)
 				.orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
